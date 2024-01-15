@@ -23,7 +23,7 @@ class Program
 
         while (playerHealth > 0 && enemyHealth > 0)
         {
-            Console.WriteLine($"\n{playerName} встречает врага {enemyName} ({enemyHealth}hp), у врага на в подсумке пистолет ({enemyAttack})");
+            Console.WriteLine($"\n{playerName} встречает врага {enemyName} ({enemyHealth}hp), у врага в подсумке пистолет ({enemyAttack})");
             Console.WriteLine("Что вы будете делать?");
             Console.WriteLine("1. Убить его\n2. Пропустить ход\n3. Использовать аптечку");
             Console.Write(">");
@@ -33,7 +33,7 @@ class Program
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"\n{playerName} ударил противника {enemyName}");
+                    Console.WriteLine($"\n{playerName} выстрелил в врага {enemyName}");
                     enemyHealth -= playerAttack;
                     break;
                 case "2":
@@ -58,7 +58,7 @@ class Program
 
             if (enemyHealth > 0)
             {
-                Console.WriteLine($"{enemyName} ударил вас!");
+                Console.WriteLine($"{enemyName} выстрелил в вас!");
                 playerHealth -= enemyAttack;
             }
 
@@ -71,7 +71,7 @@ class Program
         }
         else
         {
-            Console.WriteLine($"\n{playerName} был повержен...");
+            Console.WriteLine($"\n{playerName} был убит(((");
         }
     }
 }
